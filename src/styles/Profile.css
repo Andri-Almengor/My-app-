@@ -1,0 +1,209 @@
+/* Sección de filtro */
+.filter-section {
+  background-color: #ffffff; /* Fondo oscuro */
+  font-family: 'Poppins', sans-serif;
+  color: #181818; /* Color texto */
+  padding: 3rem 1rem;
+}
+
+.filter-section .title {
+  color: #181818; /* Texto oscuro */
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.filter-section .title::before,
+.filter-section .title::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.filter-section .title::before {
+  width: 180px;
+  height: 3px;
+  background: #020101; /* Blanco */
+}
+
+.filter-section .title::after {
+  content: "Projects";
+  font-size: 20px;
+  color: #4b0082; /* Morado */
+  padding: 0 5px;
+  background: #ffffff; /* Fondo blanco */
+  bottom: -8px;
+}
+
+/* Opciones de filtro */
+.filter-options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-options button {
+  background: none;
+  border: 2px solid #4b0082; /* Morado */
+  color: #4b0082;
+  margin: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filter-options button:hover {
+  background: #4b0082; /* Morado */
+  color: #ffffff; /* Blanco */
+}
+
+/* Tarjetas de proyectos */
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Estilo para las tarjetas */
+.card {
+  position: relative;
+  width: calc(33.33% - 1rem); /* Por defecto las tarjetas ocupan el 33.33% */
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card img {
+  position: absolute; /* Posición absoluta para ocupar todo el contenedor */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupar el 100% del ancho */
+  height: 100%; /* Ocupar el 100% de la altura */
+
+  object-position: center; /* Centra la imagen dentro del contenedor */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Blanco translúcido */
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card h3 {
+  color: #181818; /* Texto oscuro */
+  font-size: 20px;
+  margin-bottom: 1rem;
+  text-align: center; /* Centrar el título */
+  z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: center; /* Asegura que los botones estén centrados */
+  align-items: center; /* Centra los botones verticalmente */
+  margin-top: 10px; /* Separación entre el título y los botones */
+  z-index: 1; /* Asegura que los botones estén por encima de la imagen */
+}
+
+.card-buttons button {
+  background: #4b0082; /* Morado */
+  color: #ffffff; /* Blanco */
+  border: 2px solid #4b0082; /* Morado */
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card-buttons button:hover {
+  background: #ffffff; /* Blanco */
+  color: #4b0082; /* Morado */
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* En tabletas las tarjetas ocuparán el 100% del ancho */
+    height: 250px; /* Se ajusta la altura de las tarjetas */
+  }
+
+  .filter-section .title {
+    font-size: 32px;
+  }
+
+  .card-buttons {
+    flex-direction: column; /* Los botones se apilan en columnas */
+  }
+
+  .project-cards {
+    justify-content: center; /* Asegura que las tarjetas se centren */
+  }
+}
+
+/* Teléfonos */
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* En móviles las tarjetas ocuparán todo el ancho */
+    height: 200px; /* Ajusta la altura de las tarjetas */
+  }
+
+  .filter-options button {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+
+  .filter-section .title {
+    font-size: 24px;
+  }
+
+  .project-cards {
+    padding: 0;
+    flex-direction: column; /* En móviles las tarjetas se apilan en columnas */
+  }
+
+  .card-buttons {
+    flex-direction: column; /* Los botones se apilan en columnas */
+  }
+}

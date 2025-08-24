@@ -1,0 +1,131 @@
+/* Home Section Styling */
+.home {
+    display: flex;
+    background: url('../img/Banner.png');
+    background-size: cover;
+    height: 100vh;
+    color: #fff; /* Blanco */
+    min-height: 500px;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+    align-items: center; /* Centrado vertical */
+  }
+  
+  .home .max-width {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; /* Alineación izquierda */
+    padding-left: 80px; /* Espaciado a la izquierda */
+  }
+  
+  .home .home-content .text-1 {
+    font-size: 27px;
+    color: #fff; /* Blanco */
+  }
+  
+  .home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: 0; /* Elimina margen */
+    color: #fff; /* Blanco */
+  }
+  
+  .home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+    color: #fff; /* Blanco */
+  }
+  
+  .home .home-content .text-3 span {
+    color: #4b0082; /* Morado */
+    font-weight: 500;
+  }
+  
+  .home .home-content a {
+    display: inline-block;
+    background: #4b0082; /* Morado */
+    color: #fff; /* Blanco */
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid #4b0082; /* Morado */
+    transition: all 0.3s ease;
+  }
+  
+  .home .home-content a:hover {
+    color: #4b0082; /* Morado */
+    background: none;
+    border: 2px solid #4b0082; /* Morado */
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 1024px) {
+    .home .max-width {
+      padding-left: 40px; /* Reduce espaciado en tablets */
+    }
+  
+    .home .home-content .text-2 {
+      font-size: 60px;
+    }
+  
+    .home .home-content .text-3 {
+      font-size: 30px;
+    }
+  
+    .home .home-content a {
+      font-size: 20px;
+      padding: 10px 30px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .home .home-content .text-1 {
+      font-size: 20px;
+    }
+  
+    .home .home-content .text-2 {
+      font-size: 50px;
+    }
+  
+    .home .home-content .text-3 {
+      font-size: 25px;
+    }
+  
+    .home .home-content a {
+      font-size: 18px;
+      padding: 8px 25px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .home {
+      height: auto;
+      padding: 50px 0;
+    }
+  
+    .home .max-width {
+      padding-left: 20px; /* Reduce espaciado aún más en móviles */
+    }
+  
+    .home .home-content .text-1 {
+      font-size: 18px;
+    }
+  
+    .home .home-content .text-2 {
+      font-size: 40px;
+    }
+  
+    .home .home-content .text-3 {
+      font-size: 20px;
+    }
+  
+    .home .home-content a {
+      font-size: 16px;
+      padding: 8px 20px;
+    }
+  }
+  

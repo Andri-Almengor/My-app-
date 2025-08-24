@@ -1,0 +1,196 @@
+/* Estilos generales de la sección About */
+.about {
+    background-color: #fafafa; /* Fondo blanco */
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.about, .services, .skills, .teams, .contact, footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Título de la sección */
+.about .title {
+    color: #181818; /* Negro */
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #020101; /* Blanco */
+    transform: translateX(-50%);
+}
+
+.about .title::after {
+    content: "who i am";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #4b0082; /* Morado */
+    padding: 0 5px;
+    background: #ffffff; /* Fondo blanco */
+    transform: translateX(-50%);
+}
+
+/* Contenedor de la sección About */
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilo para la parte izquierda */
+.about .about-content .left {
+    width: 45%;
+}
+
+.about .about-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Estilo para la parte derecha */
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #181818; /* Negro */
+}
+
+.about .about-content .right .text span {
+    color: #4b0082; /* Morado */
+}
+
+.about .about-content .right p {
+    text-align: justify;
+    color: #181818; /* Negro */
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: #4b0082; /* Morado */
+    color: #ffffff; /* Blanco */
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #4b0082; /* Morado */
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover {
+    color: #4b0082; /* Morado */
+    background: #ffffff; /* Blanco */
+}
+
+/* Media Query para dispositivos pequeños */
+@media screen and (max-width: 1024px) {
+    .about .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .about-content .left,
+    .about .about-content .right {
+        width: 80%; /* Reducir el ancho en pantallas más pequeñas */
+        text-align: center;
+    }
+
+    .about .about-content .left img {
+        width: 80%; /* Imagen más pequeña en dispositivos móviles */
+        height: auto;
+    }
+
+    .about .title {
+        font-size: 30px; /* Reducir el tamaño del título */
+    }
+
+    .about .about-content .right .text {
+        font-size: 22px; /* Reducir el tamaño del texto */
+    }
+
+    .about .about-content .right p {
+        font-size: 18px; /* Reducir el tamaño del párrafo */
+    }
+
+    .about .about-content .right a {
+        font-size: 18px; /* Reducir tamaño de botón */
+        padding: 8px 25px;
+    }
+}
+
+/* Media Query para dispositivos móviles muy pequeños */
+@media screen and (max-width: 480px) {
+    .about .title {
+        font-size: 26px; /* Título más pequeño en pantallas muy pequeñas */
+    }
+
+    .about .about-content .left,
+    .about .about-content .right {
+        width: 100%; /* Ancho completo en pantallas muy pequeñas */
+    }
+
+    .about .about-content .left img {
+        width: 100%; /* Imagen completa en pantallas muy pequeñas */
+        height: 250px; /* Reducir la altura de la imagen */
+    }
+
+    .about .about-content .right .text {
+        font-size: 20px; /* Reducir el tamaño del texto */
+    }
+
+    .about .about-content .right p {
+        font-size: 16px; /* Reducir el tamaño del párrafo */
+    }
+
+    .about .about-content .right a {
+        font-size: 16px; /* Reducir el tamaño del botón */
+        padding: 8px 20px;
+    }
+}
+/* Estilo del botón para descargar el CV */
+.download-btn {
+    display: inline-block;
+    background: #4b0082; /* Morado */
+    color: #ffffff; /* Blanco */
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #4b0082; /* Morado */
+    transition: all 0.3s ease;
+    text-decoration: none; /* Quitar subrayado del enlace */
+    text-align: center;
+  }
+  
+  .download-btn:hover {
+    color: #4b0082; /* Morado */
+    background: #ffffff; /* Blanco */
+    border-color: #4b0082;
+  }
+  
